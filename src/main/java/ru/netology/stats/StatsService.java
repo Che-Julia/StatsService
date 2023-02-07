@@ -50,23 +50,22 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int numberMonthsBelowAverage(int[] number, double averageAmount) {
+    public int numberMonthsBelowAverage(int[] number) {
         int quantity = 0;
-        for (int i = 0; i < number.length; i++) {
-            if (number[i] < averageAmount) {
+        for (int sale : number)
+            if (sale < averageAmount(number)) {
                 quantity++;
             }
-        }
         return quantity;
     }
 
-    public int numberMonthsAboveAverage(int[] number, double averageAmount) {
+
+    public int numberMonthsAboveAverage(int[] number) {
         int quantity = 0;
-        for (int i = 0; i < number.length; i++) {
-            if (number[i] > averageAmount) {
+        for (int sale : number)
+            if (sale > averageAmount(number)) {
                 quantity++;
             }
-        }
         return quantity;
     }
 }

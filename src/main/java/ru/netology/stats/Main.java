@@ -22,10 +22,10 @@ public class Main {
         int minSales = service.minSales(arr);
         System.out.println("Номер месяца с минимальной суммой продаж " + minSales);
 
-        int quantity = service.numberMonthsBelowAverage(arr, averageAmount);
+        int quantity = service.numberMonthsBelowAverage(arr);
         System.out.println("Количество месяцев c продажами ниже среднего = " + quantity);
 
-        int quantity1 = service.numberMonthsAboveAverage(arr, averageAmount);
+        int quantity1 = service.numberMonthsAboveAverage(arr);
         System.out.println("Количество месяцев c продажами выше среднего = " + quantity1);
     }
 }
